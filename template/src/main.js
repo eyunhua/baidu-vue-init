@@ -4,7 +4,7 @@
 {{/if_eq}}
 import Vue from 'vue';
 {{#veui}}
-import {Button} from 'veui';
+import {Carousel} from 'veui';
 import Icon from 'vue-awesome/components/Icon';
 {{/veui}}
 import App from './App';
@@ -16,7 +16,7 @@ import store from './store';
 {{/vuex}}
 {{#veui}}
 
-Vue.component('veui-button', Button);
+Vue.component('veui-carousel', Carousel);
 Vue.component('icon', Icon);
 {{/veui}}
 

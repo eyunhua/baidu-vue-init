@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
     <h1>\{{ msg }}</h1>
-    <h2>集成了百度 veui 组件库 和 fecs 代码规范检查工具的 vue 项目脚手架</h2>
   </div>
 </template>
 
@@ -10,7 +9,7 @@ export default {
     name: 'HelloWorld',
     data() {
         return {
-            msg: 'Welcome to Your Vue.js App'
+            msg: '集成了百度 veui 组件库 和 fecs 代码规范检查工具的 vue 项目脚手架'
         };
     }
 };
