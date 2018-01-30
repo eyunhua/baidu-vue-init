@@ -23,8 +23,10 @@ module.exports = {
   extends: ['plugin:vue/essential', 'airbnb-base'],
   {{/if_eq}}
   {{#if_eq lintConfig "baidu"}}
-  extends: ['plugin:vue/essential', 'baidu-fecs'],
-  parser: "vue-eslint-parser",
+  extends: [
+    'plugin:vue/essential',
+    'standard'
+  ],
   {{/if_eq}}
   {{#if_eq lintConfig "none"}}
   // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
@@ -71,6 +73,14 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', {
       optionalDependencies: ['test/unit/index.js']
     }],
+    {{/if_eq}}
+    {{#if_eq lintConfig "baidu"}}
+    "arrow-parens": 0,
+    'generator-star-spacing': 0,
+    "indent": ["error", 4, { "SwitchCase": 1 }],
+    "semi": ["error", "always"],
+    "operator-linebreak": ["error", "before"],
+    "space-before-function-paren": ["error", { "anonymous": "always", "named": "never" }],
     {{/if_eq}}
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
