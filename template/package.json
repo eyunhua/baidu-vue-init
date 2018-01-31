@@ -25,9 +25,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    {{#axios}}
+    {{#if_eq httpConfig "axios"}}
     "axios": "^0.17.1",
-    {{/axios}}
+    {{/if_eq}}
+    {{#if_eq httpConfig "fetch"}}
+    "whatwg-fetch": "^2.0.3",
+    {{/if_eq}}
     {{#veui}}
     "veui": "^1.0.0-alpha.6",
     "veui-theme-one": "^1.0.0-alpha.6",

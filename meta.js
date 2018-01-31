@@ -31,7 +31,7 @@ module.exports = {
       return templateVersion
     },
   },
-  
+
   prompts: {
     name: {
       when: 'isNotTest',
@@ -83,6 +83,33 @@ module.exports = {
       when: 'isNotTest',
       type: 'confirm',
       message: 'Install axios?',
+    },
+    http: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install HTTP client?',
+    },
+    httpConfig: {
+      when: 'isNotTest && http',
+      type: 'list',
+      message: 'Pick an HTTP client',
+      choices: [
+        {
+          name: 'Axios (https://github.com/axios/axios)',
+          value: 'axios',
+          short: 'Axios',
+        },
+        {
+          name: 'Fetch (https://github.github.io/fetch)',
+          value: 'fetch',
+          short: 'Fetch',
+        },
+        {
+          name: 'none (configure it yourself)',
+          value: 'none',
+          short: 'none',
+        },
+      ],
     },
     veui: {
       when: 'isNotTest',
