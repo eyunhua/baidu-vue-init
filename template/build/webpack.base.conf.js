@@ -1,7 +1,4 @@
 'use strict'
-{{#if_eq httpConfig "fetch"}}
-import 'whatwg-fetch'
-{{/if_eq}}
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
