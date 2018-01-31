@@ -5,6 +5,6 @@
 ### use it with `vue-cli`:
 
 ``` bash
-git clone https://github.com/Domy/baidu-vue-init.git
-vue init baidu-vue-init my-project
+$ git clone https://github.com/Domy/baidu-vue-init.git
+$ vue init baidu-vue-init my-project
 ```
