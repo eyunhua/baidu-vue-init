@@ -1,6 +1,6 @@
 # baidu-vue-init
 
-> 集成了百度 veui 组件库 和 fecs 代码规范检查工具的 vue 项目脚手架
+> 集成了百度 veui 组件库 和 fecs 代码规范检查工具的 vue-cli 模版
 
 ## 使用方法：
 
@@ -11,7 +11,7 @@ $ git clone https://github.com/Domy/baidu-vue-init.git
 $ vue init ./baidu-vue-init my-project
 ```
 
-## 基于原版集成了以下功能：
+## 集成了以下功能：
 
 - vuex
 - HTTP client
