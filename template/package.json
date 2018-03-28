@@ -25,6 +25,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "api-adapt": "^2.1.1",
     {{#if_eq httpConfig "axios"}}
     "axios": "^0.17.1",
     {{/if_eq}}
@@ -32,8 +33,8 @@
     "whatwg-fetch": "^2.0.3",
     {{/if_eq}}
     {{#veui}}
-    "veui": "^1.0.0-alpha.6",
-    "veui-theme-one": "^1.0.0-alpha.6",
+    "veui": "^1.0.0-alpha.9",
+    "veui-theme-blue": "^0.6.0-dev",
     {{/veui}}
     "vue": "^2.5.2"{{#router}},
     "vue-router": "^3.0.1"{{/router}}{{#vuex}},

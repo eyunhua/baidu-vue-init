@@ -50,11 +50,11 @@ module.exports = {
         options: {
           modules: [
             {
-              package: 'veui-theme-one',
+              package: 'veui-theme-blue',
               fileName: '${module}.less'
             },
             {
-              package: 'veui-theme-one',
+              package: 'veui-theme-blue',
               fileName: '${module}.js',
               transform: false
             }
