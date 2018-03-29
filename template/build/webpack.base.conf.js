@@ -8,7 +8,9 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-{{#lint}}const createLintingRule = () => ({
+{{#lint}}
+{{#if_eq lintConfig "standard"}}
+const createLintingRule = () => ({
   test: /\.(js|vue)$/,
   loader: 'eslint-loader',
   enforce: 'pre',
@@ -17,7 +19,33 @@ function resolve (dir) {
     formatter: require('eslint-friendly-formatter'),
     emitWarning: !config.dev.showEslintErrorsInOverlay
   }
-}){{/lint}}
+})
+{{/if_eq}}
+{{#if_eq lintConfig "airbnb"}}
+const createLintingRule = () => ({
+  test: /\.(js|vue)$/,
+  loader: 'eslint-loader',
+  enforce: 'pre',
+  include: [resolve('src'), resolve('test')],
+  options: {
+    formatter: require('eslint-friendly-formatter'),
+    emitWarning: !config.dev.showEslintErrorsInOverlay
+  }
+})
+{{/if_eq}}
+{{#if_eq lintConfig "baidu"}}
+const createLintingRule = () => ({
+  test: /\.(js|vue)$/,
+  loader: 'fecs-loader',
+  enforce: 'pre',
+  include: [resolve('src'), resolve('test')],
+  options: {
+    formatter: require('eslint-friendly-formatter'),
+    emitWarning: !config.dev.showEslintErrorsInOverlay
+  }
+})
+{{/if_eq}}
+{{/lint}}
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
